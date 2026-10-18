@@ -42,7 +42,7 @@ st.markdown(
 
     The model is a **Hist Gradient Boosting** regressor, chosen from 5 algorithms using
     **10-fold cross validation** on 53,794 diamonds. Its typical error (cross-validation RMSE)
-    is about **$551**.
+    is about **\\$551**.
     """
 )
 
@@ -78,10 +78,10 @@ if st.button("Predict Price", type="primary", use_container_width=True):
     predicted_price = max(predicted_price, 0.0)
 
     st.divider()
-    st.success(f"### Estimated price: ${predicted_price:,.0f}")
+    st.success(f"### Estimated price: \\${predicted_price:,.0f}")
     st.caption(
-        f"Typical error of this model is about $551, so the real price would usually fall "
-        f"between roughly ${max(predicted_price - 551, 0):,.0f} and ${predicted_price + 551:,.0f}."
+        f"Typical error of this model is about \\$551, so the real price would usually fall "
+        f"between roughly \\${max(predicted_price - 551, 0):,.0f} and \\${predicted_price + 551:,.0f}."
     )
 
     with st.expander("See the feature vector sent to the model"):
